@@ -25,12 +25,20 @@ const Login = () => {
         if(email === "" || pass ===""){
             alert("이메일과 비밀번호를 입력하세요.")
         }else{
+            //로그인체크
             setLoading(true);
             signInWithEmailAndPassword(auth, email, pass)
             .then(success=>{
+                alert('로그인성공!');
                 setLoading(false);
                 sessionStorage.setItem('email',email);
-                navi('/');
+                sessionStorage.setItem('uid',success.user.uid)
+                if(sessionStorage.getItem('target')){
+                    navi(sessionStorage.getItem('target'));
+                }else{
+                    navi('/');
+                }
+                
             })
             .catch(error=>{
                 alert("에러:" + error.message);
