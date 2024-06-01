@@ -31,6 +31,7 @@ const Login = () => {
             .then(success=>{
                 alert('로그인성공!');
                 setLoading(false);
+                // 로그인 성공시 email, uid를 세션스토리지에 저장
                 sessionStorage.setItem('email',email);
                 sessionStorage.setItem('uid',success.user.uid)
                 if(sessionStorage.getItem('target')){
