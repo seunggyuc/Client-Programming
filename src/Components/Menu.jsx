@@ -17,6 +17,7 @@ import Mypage from './user/Mypage';
 import ListPage from './bbs/ListPage';
 import InsertPage from './bbs/InsertPage';
 import ReadPage from './bbs/ReadPage';
+import UpdatePage from './bbs/UpdatePage';
 
 const Menu = () => {
     const navi = useNavigate();
@@ -39,11 +40,11 @@ const Menu = () => {
                     navbarScroll>
                     <Nav.Link href="/books">도서검색</Nav.Link>
                     <Nav.Link href="/locals">지역검색</Nav.Link>
+                    <Nav.Link href="/bbs">게시판</Nav.Link>
                     {sessionStorage.getItem('uid') &&
                         <>
                             <Nav.Link href="/cart">장바구니</Nav.Link>
                             <Nav.Link href="/favorite">즐겨찾기</Nav.Link>
-                            <Nav.Link href="/bbs">게시판</Nav.Link>
                         </>
                     }
                 </Nav>
@@ -72,6 +73,7 @@ const Menu = () => {
             <Route path="/bbs" element={<ListPage/>}/>
             <Route path="/bbs/insert" element={<InsertPage/>}/>
             <Route path="/bbs/read/:id" element={<ReadPage/>}/>
+            <Route path="/bbs/update/:id" element={<UpdatePage/>}/>
         </Routes>
     </>
     )

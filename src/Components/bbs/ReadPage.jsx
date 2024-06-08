@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import {app} from '../../firebaseinit';
-import { getFirestore, doc, getDoc } from 'firebase/firestore';
+import { getFirestore, doc, getDoc, deleteDoc } from 'firebase/firestore';
 import {Row,Col,Button, Card} from 'react-bootstrap';
+import Comments from './Comments';
 
 const ReadPage = () => {
+    const navi = useNavigate();
     const loginEmail = sessionStorage.getItem('email');
     const [post,setPost] = useState('');
     const {id} = useParams();
@@ -20,14 +22,24 @@ const ReadPage = () => {
         callAPI();
     },[])
 
+    const onClickDelete = async() =>{
+        if(!window.confirm(`${id}번 게시글을 삭제하실래요?`))   return;
+        //게시글삭제
+        await deleteDoc(doc(db,`/posts/${id}`));
+        // window.location.href='/bbs';
+        navi('/bbs') //방법 2개임
+    }
+
     return (
         <Row>
             <Col>
-                <h1>게시글정보</h1>
-                {loginEmail==email &&
-                    <div className='text-end mb-2'>
-                        <Button variant='success' size="sm" className='me-1 px-3'>수정</Button>
-                        <Button variand='danger' size="sm" className='px-3'>삭제</Button>
+                <h1 className='my-5'>게시글정보</h1>
+                {loginEmail===email &&
+                    <div className='text-end justify-content-center'>
+                        <Button onClick={()=>navi(`/bbs/update/${id}`)}
+                            variant='success' size="sm" className='me-1 px-3'>수정</Button>
+                        <Button onClick={onClickDelete}
+                            variand='danger' size="sm" className='px-3'>삭제</Button>
                     </div>
                 }
                 <Card>
@@ -41,6 +53,7 @@ const ReadPage = () => {
                         <div style={{whiteSpace:'pre-wrap'}}>{contents}</div>
                     </Card.Body>
                 </Card>
+                <Comments/>
             </Col>
         </Row>
     )

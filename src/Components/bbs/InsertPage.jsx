@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import {Row,Col,Form,Button} from 'react-bootstrap'
 import {app} from '../../firebaseinit';
-import {getFirestore, doc, setDoc, getDoc, addDoc, collection} from 'firebase/firestore'
+import {getFirestore, addDoc, collection} from 'firebase/firestore'
 import moment from 'moment'
 
 const InsertPage = () => {
@@ -30,7 +30,7 @@ const InsertPage = () => {
         //console.log(data);
 
         await addDoc(collection(db, 'posts'), data);
-        //alert('게시글 등록 완료!');
+        alert('게시글 등록 완료!');
         window.location.href='/bbs';
     }
     return (
