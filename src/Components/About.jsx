@@ -3,11 +3,11 @@ import React from 'react'
 const About = () => {
     return (
         <div>
-            <h1 className='my-5'>회사소개</h1>
-            <h3>What is Lorem Ipsum?</h3>
-            <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-            <h3>Where does it come from?</h3>
-            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+            <h1 className='my-5'>몽골 여행</h1>
+            <h3>게르 체험</h3>
+            <p>몽골 전통 가옥 – 게르. 유목민이 사는 곳에서 직접 유목민체험을 해볼 수도 있지만, 게르 캠프에서 게르(겔) 숙박을 하는 경우가 더 많다. 게르 숙소는 가격대에 따라 시설이 다르며, 테를지 국립공원 내의 훈누 캠프를 많이 찾는다. 이곳은 한국인 여행객을 위한 한국어도 된 간판을 쉽게 발견할 수 있으며, 샤워실, 레스토랑 등의 시설도 잘 갖춰져 있는 편이다. 게르에서 머물며, 여유롭게 초원의 풍경도 감상하고, 별이 쏟아질 듯한 밤하늘도 구경하는 등 마음이 정화되는 휴식시간을 가져보자. 또한, 몽골 전통 음식인 허르헉도 꼭 먹어봐야 하는 메뉴. 조금 더 쾌적한 게르 생활을 즐기고 싶다면, 방향제, 벌레 퇴치제 등을 챙겨 가기를 추천한다.</p>
+            <h3>사막 투어</h3>
+            <p>몽골! 하면 사막에서 즐기는 다양한 액티비티을 떠올릴 수 있다. 다양한 체험을 즐기기위해, 여행자가 선택하는 곳으로는 고비사막의 홍고린엘스(Khongoryn Els)과 엘승타사르해(Elsen Tasarkhai)-미니사막 정도가 있다. 사막 모래 위에서 즐기는 모래 썰매는 일반 눈썰매나 잔디 썰매와는 또 다른 매력이 있으며, 낙타 체험은 승마와는 또 다른 매력적인 체험. 부모 낙타 뒤로 아기 낙타들이 줄지어 따라오는 장관도 볼 수 있다. 야외에서 지내는 낙타이다보니 체험 전에 장갑을 준비해가는 것을 추천한다. 고비 사막에서 홍고링엘스를 방문했다면, 조용히 사막의 소리에 귀 기울여보자. 홍고린엘스는 노래하는 사막이라는 뜻으로, 낮은음으로 웅~웅~거리는 소리를 들을 수 있을 것이다.</p>
         </div>
     )
 }

@@ -29,13 +29,13 @@ const ReadPage = () => {
         // window.location.href='/bbs';
         navi('/bbs') //방법 2개임
     }
-
+    
     return (
-        <Row>
-            <Col>
+        <Row className='justify-content-center my-5'>
+            <Col xs={10} md={8} lg={7}>
                 <h1 className='my-5'>게시글정보</h1>
                 {loginEmail===email &&
-                    <div className='text-end justify-content-center'>
+                    <div className='mb-2 text-end'>
                         <Button onClick={()=>navi(`/bbs/update/${id}`)}
                             variant='success' size="sm" className='me-1 px-3'>수정</Button>
                         <Button onClick={onClickDelete}
@@ -45,7 +45,7 @@ const ReadPage = () => {
                 <Card>
                     <Card.Body>
                         <h5>{title}</h5>
-                        <div className='text-muted'>
+                        <div className='text-muted justify-content-center'>
                             <span className='me-3'>{date}</span>
                             <span>{email}</span>
                         </div>

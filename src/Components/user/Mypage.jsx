@@ -44,6 +44,8 @@ const Mypage = () => {
         const res=await getDoc(doc(db,`users/${uid}`));
         if(res.data()){
             setForm(res.data());
+        }else{
+            setDoc(doc(db, 'users', uid), form);
         }
         setLoading(false);
     }
